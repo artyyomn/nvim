@@ -17,3 +17,4 @@ opt.backup = false
 opt.undofile = true
 opt.scrolloff = 8
 opt.swapfile = false
+opt.fillchars:append({eob = " "})

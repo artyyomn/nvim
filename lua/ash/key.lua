@@ -5,6 +5,7 @@ map("n", "<Space>", "<Nop>", opts)
 map("n", "<leader>w", ":w<CR>", opts)
 map("n", "<leader>e", ":Ex<CR>", opts)
 map("n", "<leader>q", ":q<CR>", opts)
+map("n", "<leader>Q", ":q!<CR>", opts)
 
 --telescope bindings
 map("n", "<leader>f", ":Telescope find_files<CR>", opts)

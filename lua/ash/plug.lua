@@ -7,6 +7,35 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			--vim.cmd("colorscheme rose-pine")
+		end
+	},
+	{
+		'bluz71/vim-moonfly-colors',
+		name = "moonfly",
+		config = function()
+			--vim.cmd("colorscheme moonfly")
+		end
+	},
+	{
+		'sainnhe/sonokai'
+	},
+	{
+		'luisiacc/gruvbox-baby'
+	},
+	{
+		'rebelot/kanagawa.nvim'
+	},
+	{
+		{ "savq/melange-nvim" }
+	},
+	{
+		{ "EdenEast/nightfox.nvim" }
+	},
+	{
 		"nvim-telescope/telescope.nvim", 
 		dependencies = { "nvim-lua/plenary.nvim" }
 	},
@@ -43,7 +72,10 @@ require("lazy").setup({
 						enable = true,
 					},
 				},
-				--view = { width = 15 }
+				view = { 
+					width = 25,
+					side = "right",
+				}
 			})
 		end
 	},
@@ -83,7 +115,7 @@ require("lazy").setup({
 		'neovim/nvim-lspconfig',
 		dependencies = { 'saghen/blink.cmp' },
 		config = function()
-			capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
+			capabilities = require('blink.cmp').get_lsp_capabilities(capabilities),
 			require('lspconfig').clangd.setup {capabilities = capabilities}
 		end,
 	},
@@ -93,7 +125,7 @@ require("lazy").setup({
 		dependencies = { 'rafamadriz/friendly-snippets' },
 		version = '1.*',
 		opts = {
-			keymap = { preset = 'enter' },
+			keymap = { preset = 'super-tab' },
 
 			appearance = {
 				nerd_font_variant = 'mono'
