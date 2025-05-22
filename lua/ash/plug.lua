@@ -27,7 +27,11 @@ require("lazy").setup({
 		'luisiacc/gruvbox-baby'
 	},
 	{
-		'rebelot/kanagawa.nvim'
+		'rebelot/kanagawa.nvim',
+		name = "kanagawa",
+		config = function()
+			vim.cmd("colorscheme kanagawa-dragon")
+		end
 	},
 	{
 		{ "savq/melange-nvim" }
@@ -49,6 +53,9 @@ require("lazy").setup({
 					theme = 'auto',
 					section_separators = '',
 					component_separators = '',
+					disabled_filetypes = {
+						statusline = {'NvimTree'}
+					}
 				},
 				sections = {
 					lualine_a = {'mode'},
@@ -75,7 +82,7 @@ require("lazy").setup({
 				view = { 
 					width = 25,
 					side = "right",
-				}
+				},
 			})
 		end
 	},
