@@ -18,3 +18,4 @@ opt.undofile = true
 opt.scrolloff = 8
 opt.swapfile = false
 opt.fillchars:append({eob = " "})
+opt.guicursor="n-v-c-i:block-blinkwait1000-blinkon500-blinkoff500"
